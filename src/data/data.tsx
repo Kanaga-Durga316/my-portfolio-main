@@ -27,8 +27,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: 'Kanaga Durga - Full Stack Developer Portfolio',
+  title: 'Kanaga Durga - Software Developer Portfolio',
+  description: 'Kanaga Durga - Software Developer Portfolio',
 };
 
 /**
@@ -56,8 +56,8 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a  <strong className="text-stone-100">Full Stack Developer</strong>, currently learning
-        about <strong className="text-stone-100">Full Stack </strong> helping build a modern, mobile-first, domain
+        I'm a  <strong className="text-stone-100">Software Developer</strong>, currently learning
+        about <strong className="text-stone-100">Software Development </strong> helping build a modern, mobile-first, domain
         based and site builder.
       </p>
     </>
@@ -106,14 +106,6 @@ export const skills: SkillGroup[] = [
         name: 'Tamil',
         level: 10,
       },
-      {
-        name: 'Malayalam',
-        level: 4,
-      },
-      {
-        name: 'Telugu',
-        level: 3,
-      },
     ],
   },
   {
@@ -121,7 +113,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 8,
+        level: 7,
       },
       {
         name: 'Css',
@@ -129,7 +121,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'Html',
-        level: 6,
+        level: 7,
       },
     ],
   },
@@ -138,7 +130,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Node.js',
-        level: 8,
+        level: 5,
       },
       {
         name: 'Python',
@@ -146,7 +138,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'java',
-        level: 8,
+        level: 7,
       },
     ],
   },
@@ -157,14 +149,6 @@ export const skills: SkillGroup[] = [
         name: 'React Native',
         level: 9,
       },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Ionic',
-        level: 3,
-      },
     ],
   },
 ];
@@ -173,12 +157,6 @@ export const skills: SkillGroup[] = [
  * Portfolio section
  */
 export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Student management system',
-    description:'A Student Management System is a web-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
-    url: 'https://github.com/Akshaya-Shri/studio',
-    image: '/images/certifications/portfolio/portfolio-1.jpg'
-  },
   {
     title: 'Project title 4',
     description: 'Give a short description of your project here.',
@@ -239,6 +217,16 @@ export const achievements: TimelineItem[] = [
     content: (
       <p>
         I demonstrated strong technical skills and dedication during my internship
+      </p>
+    ),
+  },
+  {
+    date: 'Dec 2025-Jan 2026',
+    location: 'Upskill Campus and UniConverge Technologies Pvt. Ltd. ',
+    title: 'INTERN- Full Stack Development',
+    content: (
+      <p>
+        I demonstrated strong technical skills and dedication during my internship,gaining hands-on experience in full stack development.
       </p>
     ),
   },
@@ -310,6 +298,11 @@ export const certifications = [
     platform: 'Udemy',
     logo: '/images/certifications/udemy.png',
     certificates: ['/certificates/udemy.pdf'],
+  },
+  {
+    platform: 'Guvi',
+    logo: '/images/certifications/Guvi.png',
+    certificates: ['/certificates/Guvi.pdf'],
   },
   {
     platform: 'Certificate',
