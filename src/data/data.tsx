@@ -81,7 +81,7 @@ export const heroData: Hero = {
  * About section
  */
 export const aboutData: About = {
-  description: `I’m a passionate Full Stack Development student who enjoys building clean and responsive web applications. I love learning new technologies, solving problems through code, and turning ideas into real projects.`,
+  description: `I’m a passionate Software Development student who enjoys building clean and responsive web applications. I love learning new technologies, solving problems through code, and turning ideas into real projects.`,
   aboutItems: [
     {label: 'Location', text: 'Aundipatti, Theni', Icon: MapIcon},
     {label: 'Age', text: '20', Icon: CalendarIcon},
