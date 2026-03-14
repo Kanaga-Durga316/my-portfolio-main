@@ -157,16 +157,11 @@ export const skills: SkillGroup[] = [
  * Portfolio section
  */
 export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: '',
-    image: '/images/certifications/portfolio/portfolio-4.jpg'
-  },
+  
   {
     title: 'Online Grocery & Food Delivery E-commerce App',
     description:'BuyBee is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
-    url: 'https://reactresume.com',
+    url: 'https://github.com/Kanaga-Durga316/grocery',
     image: '/images/certifications/portfolio/portfolio-5.jpg'
   },
   {
