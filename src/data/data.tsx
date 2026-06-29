@@ -159,22 +159,34 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   
   {
+    title: 'AI Grievance Redressal System',
+    description:'Designed to automate and streamline the grievance handling process in public governance. Our system uses AI to analyze, categorize, and provide solutions for citizen grievances efficiently.',
+    url: 'https://ai-grievance-rs3a.onrender.com/',
+    image: '/images/certifications/portfolio/portfolio-5.jpg'
+  },
+  {
     title: 'Online Grocery & Food Delivery E-commerce App',
     description:'BuyBee is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
     url: 'https://github.com/Kanaga-Durga316/grocery',
-    image: '/images/certifications/portfolio/portfolio-5.jpg'
+    image: '/images/certifications/portfolio/portfolio-4.jpg'
   },
   {
     title: 'Event scheduler app',
     description:'Developed an Event Scheduler App that supports event creation, scheduling, and reminders.',
     url: 'https://github.com/Akshaya-Shri/studio',
-    image: '/images/certifications/portfolio/portfolio-7.jpg'
+    image: '/images/certifications/portfolio/portfolio-9.jpg'
   },
   {
-    title: 'Campus Connect',
-    description:'CampusConnect is a social networking platform designed to connect college students.',
+    title: 'Student Management System',
+    description:'It is a web-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
     url: 'https://github.com/Akshaya-Shri/campusconnect',
     image: '/images/certifications/portfolio/portfolio-10.jpg'
+  },
+  {
+    title: 'Student Management System',
+    description:'It is a web-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
+    url: 'https://github.com/Akshaya-Shri/campusconnect',
+    image: '/images/certifications/portfolio/portfolio-8.jpg'
   },
 ];
 
@@ -207,7 +219,7 @@ export const education: TimelineItem[] = [
 export const achievements: TimelineItem[] = [
   {
     date: 'june-july 2025',
-    location: 'Foclen Software Pvt.Ltd.,',
+    location: 'Foclen Software Pvt.Ltd., -Theni',
     title: 'INTERN- Core Java Concepts',
     content: (
       <p>
@@ -218,7 +230,27 @@ export const achievements: TimelineItem[] = [
   {
     date: 'Dec 2025-Jan 2026',
     location: 'Upskill Campus and UniConverge Technologies Pvt. Ltd. ',
-    title: 'INTERN- Full Stack Development',
+    title: 'INTERN- Full Stack Development (Remote)',
+    content: (
+      <p>
+        I demonstrated strong technical skills and dedication during my internship,gaining hands-on experience in full stack development.
+      </p>
+    ),
+  },
+  {
+    date: 'march -april 2026',
+    location: 'Adroit Technologies Innovative Solutions Pvt. Ltd.,',
+    title: 'INTERN- Data analysis solutions using IBM Cognos Analytics (Remote)',
+    content: (
+      <p>
+        Developed data analysis solutions including dashboards, reports, and visualizations to support decision-making.
+      </p>
+    ),
+  },
+  {
+    date: 'june - july 2026',
+    location: 'Web Walk Infosys Pvt.Ltd., -Madurai',
+    title: 'INTERN- Full Stack Web Development(MERN)',
     content: (
       <p>
         I demonstrated strong technical skills and dedication during my internship,gaining hands-on experience in full stack development.
