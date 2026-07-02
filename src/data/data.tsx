@@ -142,15 +142,6 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-    ],
-  },
 ];
 
 /**
@@ -171,9 +162,9 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/images/certifications/portfolio/portfolio-4.jpg'
   },
   {
-    title: 'Event scheduler app',
-    description:'Developed an Event Scheduler App that supports event creation, scheduling, and reminders.',
-    url: 'https://github.com/Akshaya-Shri/studio',
+    title: 'CAMPUS SKILL EXCHANGE PLATFORM',
+    description:'Connect with fellow students to share knowledge, learn new skills, and grow together.',
+    url: 'https://campus-skill.vercel.app/',
     image: '/images/certifications/portfolio/portfolio-9.jpg'
   },
   {
