@@ -142,6 +142,19 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
+  {
+    name: 'Databases',
+    skills: [
+      {
+        name: 'MySQL',
+        level: 7,
+      },
+      {
+        name: 'MongoDB',
+        level: 6,
+      },
+    ],
+  },
 ];
 
 /**

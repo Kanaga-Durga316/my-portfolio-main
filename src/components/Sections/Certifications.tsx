@@ -1,10 +1,24 @@
-import { FC, memo } from 'react';
+import { FC, memo, useState } from 'react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { certifications, SectionId } from '../../data/data';
 import Section from '../Layout/Section';
 
 const Certifications: FC = memo(() => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const currentCert = certifications[currentIndex];
+
   const handleClick = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? certifications.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % certifications.length);
   };
 
   return (
@@ -28,26 +42,55 @@ const Certifications: FC = memo(() => {
           Certifications
         </h2>
 
-        <div className="grid grid-cols-2 gap-10 place-items-center sm:grid-cols-3 md:grid-cols-5">
-          {certifications.map((cert) => (
-            <div key={cert.platform} className="group relative flex flex-col items-center">
-              <button
-                onClick={() => handleClick(cert.certificates[0])}
-                className="relative flex h-24 w-24 items-center justify-center rounded-full border border-white/20 bg-white/10 p-4 shadow-[0_0_30px_rgba(255,255,255,0.12)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-white/20"
-                title={cert.platform}
-              >
-                <img
-                  src={cert.logo}
-                  alt={cert.platform}
-                  className="h-12 w-12 object-contain"
-                />
-              </button>
+        <div className="mx-auto flex w-full max-w-2xl flex-col items-center gap-8">
+          <div className="flex items-center gap-6">
+            <button
+              onClick={handlePrevious}
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition duration-300 hover:bg-white/20"
+              aria-label="Previous certificate"
+            >
+              <ChevronLeftIcon className="h-6 w-6" />
+            </button>
 
-              <div className="pointer-events-none absolute top-full mt-3 scale-95 rounded-full border border-white/20 bg-neutral-900/90 px-4 py-2 text-sm font-medium text-white opacity-0 shadow-xl transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
-                {cert.platform}
-              </div>
-            </div>
-          ))}
+            <button
+              onClick={() => handleClick(currentCert.certificates[0])}
+              className="relative flex h-36 w-36 items-center justify-center rounded-full border border-white/20 bg-white/10 p-6 shadow-[0_0_30px_rgba(255,255,255,0.12)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-white/20"
+              title={currentCert.platform}
+            >
+              <img
+                src={currentCert.logo}
+                alt={currentCert.platform}
+                className="h-16 w-16 object-contain"
+              />
+            </button>
+
+            <button
+              onClick={handleNext}
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition duration-300 hover:bg-white/20"
+              aria-label="Next certificate"
+            >
+              <ChevronRightIcon className="h-6 w-6" />
+            </button>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-2xl font-semibold text-white">
+              {currentCert.platform}
+            </h3>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {certifications.map((cert, index) => (
+              <button
+                key={cert.platform}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex ? 'bg-white' : 'bg-white/30 hover:bg-white/60'
+                }`}
+                aria-label={`Show ${cert.platform}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </Section>
