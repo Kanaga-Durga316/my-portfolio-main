@@ -52,17 +52,25 @@ const Certifications: FC = memo(() => {
               <ChevronLeftIcon className="h-6 w-6" />
             </button>
 
-            <button
-              onClick={() => handleClick(currentCert.certificates[0])}
-              className="relative flex h-36 w-36 items-center justify-center rounded-full border border-white/20 bg-white/10 p-6 shadow-[0_0_30px_rgba(255,255,255,0.12)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-white/20"
-              title={currentCert.platform}
-            >
-              <img
-                src={currentCert.logo}
-                alt={currentCert.platform}
-                className="h-16 w-16 object-contain"
-              />
-            </button>
+            <div key={currentIndex} className="flex flex-col items-center gap-4 animate-fadeUp">
+              <button
+                onClick={() => handleClick(currentCert.certificates[0])}
+                className="relative flex h-36 w-36 items-center justify-center rounded-full border border-white/20 bg-white/10 p-6 shadow-[0_0_30px_rgba(255,255,255,0.12)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-white/20 animate-float"
+                title={currentCert.platform}
+              >
+                <img
+                  src={currentCert.logo}
+                  alt={currentCert.platform}
+                  className="h-16 w-16 object-contain"
+                />
+              </button>
+
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold text-white">
+                  {currentCert.platform}
+                </h3>
+              </div>
+            </div>
 
             <button
               onClick={handleNext}
@@ -73,19 +81,13 @@ const Certifications: FC = memo(() => {
             </button>
           </div>
 
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold text-white">
-              {currentCert.platform}
-            </h3>
-          </div>
-
           <div className="flex flex-wrap justify-center gap-3">
             {certifications.map((cert, index) => (
               <button
                 key={cert.platform}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex ? 'bg-white' : 'bg-white/30 hover:bg-white/60'
+                  index === currentIndex ? 'bg-white animate-pulse' : 'bg-white/30 hover:bg-white/60'
                 }`}
                 aria-label={`Show ${cert.platform}`}
               />
