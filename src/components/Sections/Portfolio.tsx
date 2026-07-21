@@ -23,12 +23,12 @@ const Portfolio: FC = memo(() => {
                   className={classNames(
                     'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
                   )}>
-                  <div className="relative w-full h-64">
+                  <div className="relative w-full h-64 bg-neutral-900">
                     <Image
                       src={image}
                       alt={title}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-contain rounded-lg"
                       sizes="(max-width: 768px) 100vw, 25vw"
                     />
                   </div>
