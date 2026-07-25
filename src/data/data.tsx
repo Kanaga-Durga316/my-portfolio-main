@@ -171,7 +171,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Online Grocery & Food Delivery E-commerce App',
     description:'BuyBee is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
-    url: 'https://github.com/Kanaga-Durga316/grocery',
+    url: 'https://grocery-blush-nu.vercel.app/',
     image: '/images/certifications/portfolio/portfolio-4.jpg'
   },
   {
