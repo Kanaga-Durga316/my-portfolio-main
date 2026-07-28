@@ -163,12 +163,6 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   
   {
-    title: 'AI Grievance Redressal System',
-    description:'Designed to automate and streamline the grievance handling process in public governance. Our system uses AI to analyze, categorize, and provide solutions for citizen grievances efficiently.',
-    url: 'https://ai-grievance-rs3a.onrender.com/',
-    image: '/images/certifications/portfolio/portfolio-5.jpg'
-  },
-  {
     title: 'Online Grocery & Food Delivery E-commerce App',
     description:'BuyBee is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
     url: 'https://grocery-blush-nu.vercel.app/',
