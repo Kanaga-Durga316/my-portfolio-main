@@ -177,7 +177,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Student Management System',
     description:'It is a web-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
-    url: 'https://github.com/Akshaya-Shri/campusconnect',
+    url: 'https://github.com/Kanaga-Durga316/student-management-system',
     image: '/images/certifications/portfolio/portfolio-10.jpg'
   },
   {
