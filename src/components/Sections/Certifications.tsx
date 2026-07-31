@@ -40,18 +40,18 @@ const Certifications: FC = memo(() => {
           Certifications
         </h2>
 
-        <div className="mx-auto flex w-full max-w-6xl flex-wrap justify-center gap-8 md:gap-10 lg:gap-12">
+        <div className="mx-auto flex w-full max-w-6xl snap-x snap-mandatory overflow-x-auto gap-8 py-6 pb-8 scroll-px-[max(50%-(140px/2))] md:scroll-px-[max(50%-(160px/2))] md:gap-10 lg:gap-12">
           {certifications.map((cert, index) => {
             const isActive = activeIndex === index;
             const gradient = platformGradients[cert.platform] || 'from-orange-500/20 to-orange-600/10 border-orange-400/50 shadow-orange-500/30';
             const glowColor = gradient.split(' ')[1].replace('to-', '').replace('/10', '').replace('/20', '');
 
             return (
-              <div
-                className="group relative"
-                key={cert.platform}
-                style={{animationDelay: `${index * 150}ms`}}
-              >
+                <div
+                  className="group relative flex-none snap-start"
+                  key={cert.platform}
+                  style={{animationDelay: `${index * 150}ms`}}
+                >
                 <div className="animate-fadeInUp opacity-0" style={{animationDelay: `${index * 150}ms`}}>
                   <button
                     className={`

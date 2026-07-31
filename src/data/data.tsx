@@ -8,9 +8,8 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import WhatsappIcon from '../components/Icon/WhatsappIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-const heroImage = '/images/certifications/header-background.webp';
+import WhatsappIcon from '../components/Icon/WhatsappIcon';
 import {
   About,
   ContactSection,
@@ -22,6 +21,8 @@ import {
   Social,
   TimelineItem,
 } from './dataDef';
+
+const heroImage = '/images/certifications/header-background.webp';
 
 /**
  * Page meta data
@@ -64,7 +65,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/Durga ResumeM.pdf',
+      href: '/Durga Resume.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
