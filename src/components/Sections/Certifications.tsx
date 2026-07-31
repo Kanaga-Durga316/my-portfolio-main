@@ -72,13 +72,15 @@ const Certifications: FC = memo(() => {
                     } : {}}
                     title={cert.platform}
                   >
-                    <img
-                      alt={cert.platform}
-                      className={`h-14 w-14 md:h-16 md:w-16 object-contain transition-all duration-500 ${
-                        isActive ? 'brightness-110 drop-shadow-lg' : ''
-                      }`}
-                      src={cert.logo}
-                    />
+                     <div className="flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md">
+                       <img
+                         alt={cert.platform}
+                         className={`max-h-full max-w-full object-contain transition-all duration-500 ${
+                           isActive ? 'brightness-110' : ''
+                         }`}
+                         src={cert.logo}
+                       />
+                     </div>
 
                     {isActive && (
                       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent opacity-50" />
