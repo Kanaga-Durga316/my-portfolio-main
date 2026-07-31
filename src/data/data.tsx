@@ -64,7 +64,7 @@ export const heroData: Hero = {
   ),
   actions: [
     {
-      href: '/Durga Resume.pdf',
+      href: '/Durga ResumeM.pdf',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
