@@ -10,15 +10,6 @@ const Certifications: FC = memo(() => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const platformGradients: Record<string, string> = {
-    'Coursera': 'from-blue-500/20 to-blue-600/10 border-blue-400/50 shadow-blue-500/30',
-    'Infosys': 'from-emerald-500/20 to-emerald-600/10 border-emerald-400/50 shadow-emerald-500/30',
-    'NPTEL': 'from-orange-500/20 to-orange-600/10 border-orange-400/50 shadow-orange-500/30',
-    'Udemy': 'from-purple-500/20 to-purple-600/10 border-purple-400/50 shadow-purple-500/30',
-    'Guvi': 'from-cyan-500/20 to-cyan-600/10 border-cyan-400/50 shadow-cyan-500/30',
-    'Certificate': 'from-amber-500/20 to-amber-600/10 border-amber-400/50 shadow-amber-500/30',
-  };
-
   return (
     <Section
       className="relative py-20 overflow-hidden"
@@ -40,70 +31,45 @@ const Certifications: FC = memo(() => {
           Certifications
         </h2>
 
-        <div className="mx-auto flex w-full max-w-6xl snap-x snap-mandatory overflow-x-auto gap-8 py-6 pb-8 scroll-px-[max(50%-(140px/2))] md:scroll-px-[max(50%-(160px/2))] md:gap-10 lg:gap-12">
+        <div className="mx-auto flex w-full max-w-6xl snap-x snap-mandatory gap-8 overflow-x-auto overflow-y-hidden py-6 pb-8 scroll-p-1/2 scroll-px-4 md:gap-10 lg:gap-12">
           {certifications.map((cert, index) => {
             const isActive = activeIndex === index;
-            const gradient = platformGradients[cert.platform] || 'from-orange-500/20 to-orange-600/10 border-orange-400/50 shadow-orange-500/30';
-            const glowColor = gradient.split(' ')[1].replace('to-', '').replace('/10', '').replace('/20', '');
 
             return (
                 <div
-                  className="group relative flex-none snap-start"
+                  className="flex flex-none flex-col items-center justify-center gap-4 snap-start animate-fadeUp"
                   key={cert.platform}
-                  style={{animationDelay: `${index * 150}ms`}}
+                  style={{animationDelay: `${index * 150}ms`, minWidth: '120px'}}
                 >
-                <div className="animate-fadeInUp opacity-0" style={{animationDelay: `${index * 150}ms`}}>
-                  <button
-                    className={`
-                      relative flex h-28 w-28 md:h-32 md:w-32 items-center justify-center
-                      rounded-2xl border-2 bg-white/5 p-5 backdrop-blur-md
-                      transition-all duration-500 ease-out
-                      ${isActive
-                        ? `-translate-y-3 scale-110 bg-gradient-to-br ${gradient}`
-                        : 'border-white/10 hover:border-white/30 hover:-translate-y-1 hover:scale-105'
-                      }
-                      ${isActive ? 'animate-glow' : ''}
-                    `}
-                    onClick={() => handleClick(cert.certificates[0])}
-                    onMouseEnter={() => setActiveIndex(index)}
-                    onMouseLeave={() => setActiveIndex(null)}
-                    style={isActive ? {
-                      boxShadow: `0 0 40px ${glowColor}40, 0 0 80px ${glowColor}20, inset 0 0 20px ${glowColor}10`
-                    } : {}}
-                    title={cert.platform}
-                  >
-                     <div className="flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md">
-                       <img
-                         alt={cert.platform}
-                         className={`max-h-full max-w-full object-contain transition-all duration-500 ${
-                           isActive ? 'brightness-110' : ''
-                         }`}
-                         src={cert.logo}
-                       />
-                     </div>
+                <button
+                  className={`
+                    relative flex h-32 w-32 items-center justify-center
+                    rounded-2xl border-2 bg-neutral-800/50 p-4
+                    transition-all duration-500 ease-out
+                    hover:scale-105 hover:-translate-y-1
+                    ${isActive ? 'scale-110 -translate-y-2 border-orange-400 shadow-lg shadow-orange-500/40' : 'border-neutral-600 hover:border-neutral-400'}
+                  `}
+                  onClick={() => handleClick(cert.certificates[0])}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onMouseLeave={() => setActiveIndex(null)}
+                  title={cert.platform}
+                >
+                  <img
+                    alt={cert.platform}
+                    className={`h-16 w-20 max-h-full max-w-full object-contain transition-all duration-500 ${
+                      isActive ? 'drop-shadow-lg' : 'brightness-90'
+                    }`}
+                    src={cert.logo}
+                  />
+                </button>
 
-                    {isActive && (
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 to-transparent opacity-50" />
-                    )}
-
-                    <div className={`absolute inset-0 rounded-2xl border-2 border-white/20 opacity-0 transition-opacity duration-500 ${
-                      isActive ? 'opacity-100 scale-110' : ''
-                    }`} style={{transform: isActive ? 'scale(1.1)' : 'scale(1)'}} />
-                  </button>
-
-                  <div className="mt-4 text-center">
-                    <h3 className={`text-base md:text-lg font-semibold transition-all duration-300 ${
-                      isActive ? 'text-white translate-y-0' : 'text-neutral-300'
-                    }`}>
-                      {cert.platform}
-                    </h3>
-                    <p className={`mt-1 text-xs font-medium uppercase tracking-wider transition-all duration-300 ${
-                      isActive ? 'text-orange-400 opacity-100 translate-y-0' : 'text-neutral-500 opacity-0 translate-y-2'
-                    }`}>
-                      View Certificate
-                    </p>
-                  </div>
-                </div>
+                <h3
+                  className={`text-center text-sm font-semibold transition-all duration-300 ${
+                    isActive ? 'text-white' : 'text-neutral-400'
+                  }`}
+                >
+                  {cert.platform}
+                </h3>
               </div>
             );
           })}
