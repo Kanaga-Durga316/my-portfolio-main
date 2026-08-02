@@ -19,7 +19,7 @@ const Certifications: FC = memo(() => {
       <img
         alt="Certifications background"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
-        src="/images/certifications/header-background.webp"
+        src="/certificates/bg.png"
       />
 
       {/* Dark Overlay */}

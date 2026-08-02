@@ -22,7 +22,7 @@ import {
   TimelineItem,
 } from './dataDef';
 
-const heroImage = '/images/certifications/header-background.webp';
+const heroImage = '/images/about.png';
 
 /**
  * Page meta data
