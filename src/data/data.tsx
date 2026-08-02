@@ -113,16 +113,28 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
-        name: 'React',
+        name: 'React.js',
         level: 7,
       },
       {
-        name: 'Css',
+        name: 'TypeScript',
+        level: 5,
+      },
+      {
+        name: 'Tailwind CSS',
+        level: 5,
+      },
+      {
+        name: 'Css3',
         level: 7,
       },
       {
-        name: 'Html',
+        name: 'Html5',
         level: 7,
+      },
+      {
+        name: 'JavaScript',
+        level: 5,
       },
     ],
   },
@@ -134,12 +146,24 @@ export const skills: SkillGroup[] = [
         level: 5,
       },
       {
+        name: 'C',
+        level: 5,
+      },
+      {
+        name: 'C++',
+        level: 3,
+      },
+      {
         name: 'Python',
         level: 7,
       },
       {
         name: 'java',
         level: 7,
+      },
+      {
+        name: 'Express.js',
+        level: 5,
       },
     ],
   },
@@ -165,7 +189,7 @@ export const portfolioItems: PortfolioItem[] = [
   
   {
     title: 'Online Grocery & Food Delivery E-commerce App',
-    description:'BuyBee is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
+    description:'ShopNGo is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
     url: 'https://grocery-blush-nu.vercel.app/',
     image: '/images/certifications/portfolio/portfolio-4.jpg'
   },
@@ -222,7 +246,7 @@ export const achievements: TimelineItem[] = [
     title: 'INTERN- Core Java Concepts',
     content: (
       <p>
-        I demonstrated strong technical skills and dedication during my internship
+        Trained in Core Java concepts and OOP fundamentals.
       </p>
     ),
   },
@@ -232,7 +256,7 @@ export const achievements: TimelineItem[] = [
     title: 'INTERN- Full Stack Development (Remote)',
     content: (
       <p>
-        I demonstrated strong technical skills and dedication during my internship,gaining hands-on experience in full stack development.
+        Trained in full stack web development.
       </p>
     ),
   },
@@ -242,7 +266,7 @@ export const achievements: TimelineItem[] = [
     title: 'INTERN- Data analysis solutions using IBM Cognos Analytics (Remote)',
     content: (
       <p>
-        Developed data analysis solutions including dashboards, reports, and visualizations to support decision-making.
+        Built dashboards, reports, and visualizations using IBM Cognos Analytics.
       </p>
     ),
   },
@@ -252,7 +276,7 @@ export const achievements: TimelineItem[] = [
     title: 'INTERN- Full Stack Web Development(MERN)',
     content: (
       <p>
-        I demonstrated strong technical skills and dedication during my internship,gaining hands-on experience in full stack development.
+        Trained in MERN-based full stack web development.
       </p>
     ),
   },
@@ -275,12 +299,12 @@ export const achievements: TimelineItem[] = [
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Here is a good spot for a message to my readers to let them know how best to reach out to me.',
   items: [
     {
       type: ContactType.Email,
-      text: 'murugesan99659100@gmail.com',
-      href: 'mailto:murugesan99659100@gmail.com',
+      text: 'kanagadurga316gmail.com',
+      href: 'mailto:kanagadurga316@gmail.com',
     },
     {
       type: ContactType.Location,
@@ -301,7 +325,7 @@ export const contact: ContactSection = {
 };
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Kanaga-Durga316'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/kanaga-durga-a996782a3/'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/kanagadurga316'},
   {label: 'Whatsapp', Icon: WhatsappIcon, href: 'https://wa.me/919965910035'},
 ];
 export const certifications = [
