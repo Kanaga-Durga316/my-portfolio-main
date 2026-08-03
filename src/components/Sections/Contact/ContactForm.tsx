@@ -49,7 +49,8 @@ const ContactForm: FC = memo(() => {
         );
         setStatus('success');
         setData(defaultData);
-      } catch {
+      } catch (error) {
+        console.error('Failed to send message:', error);
         setStatus('error');
       }
     },
