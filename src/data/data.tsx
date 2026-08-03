@@ -355,8 +355,8 @@ export const certifications = [
     certificates: ['/certificates/Guvi.pdf'],
   },
   {
-    platform: 'Certificate',
+    platform: 'Internship',
     logo: '/images/certifications/certificate.png',
-    certificates: ['/certificates/other.pdf'],
+    certificates: ['/certificates/internship.pdf'],
   },
 ];
