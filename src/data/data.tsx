@@ -356,7 +356,7 @@ export const certifications = [
   },
   {
     platform: 'Internship',
-    logo: '/images/certifications/certificate.png',
+    logo: '/images/certifications/internship.png',
     certificates: ['/certificates/internship.pdf'],
   },
 ];
