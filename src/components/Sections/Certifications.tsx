@@ -1,13 +1,16 @@
+import {useRouter} from 'next/router';
 import {FC, memo, useState} from 'react';
 
 import {certifications, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 
 const Certifications: FC = memo(() => {
+  const router = useRouter();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const handleClick = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+  const handleClick = (platform: string) => {
+    const slug = platform.toLowerCase().replace(/\s+/g, '-');
+    router.push(`/certificates/${slug}`);
   };
 
   return (
@@ -49,7 +52,7 @@ const Certifications: FC = memo(() => {
                     hover:scale-105 hover:-translate-y-1
                     ${isActive ? 'scale-110 -translate-y-2 border-orange-400 shadow-lg shadow-orange-500/40' : 'border-neutral-600 hover:border-neutral-400'}
                   `}
-                  onClick={() => handleClick(cert.certificates[0])}
+                  onClick={() => handleClick(cert.platform)}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(null)}
                   title={cert.platform}
