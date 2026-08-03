@@ -25,14 +25,14 @@ const Portfolio: FC = memo(() => {
                   )}>
                   <div className="relative w-full h-64 bg-neutral-900">
                     <Image
-                      src={image}
                       alt={title}
-                      fill
                       className="object-contain rounded-lg"
+                      fill
                       sizes="(max-width: 768px) 100vw, 25vw"
+                      src={image}
                     />
                   </div>
-                    <ItemOverlay item={item} />
+                  <ItemOverlay item={item} />
                 </div>
               </div>
             );

@@ -17,10 +17,6 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
         {/* several domains list the same content, make sure google knows we mean this one. */}
         <link href={`https://reactresume.com${pathname}`} key="canonical" rel="canonical" />
 
-        <link href="/images/logo.png" rel="icon" type="image/png" />
-        <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
-        <link href="/site.webmanifest" rel="manifest" />
-
         {/* Open Graph : https://ogp.me/ */}
         <meta content={title} property="og:title" />
         <meta content={description} property="og:description" />

@@ -42,7 +42,7 @@ export const SectionId = {
   Portfolio: 'portfolio',
   Resume: 'resume',
   Skills: 'skills',
-  Certifications:'certifications',
+  Certifications: 'certifications',
   Stats: 'stats',
 } as const;
 
@@ -57,8 +57,8 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a  <strong className="text-stone-100">Software Developer</strong>, currently learning
-        about <strong className="text-stone-100">Software Development </strong> helping build a modern, mobile-first, domain
+        I'm a <strong className="text-stone-100">Software Developer</strong>, currently learning about{' '}
+        <strong className="text-stone-100">Software Development </strong> helping build a modern, mobile-first, domain
         based and site builder.
       </p>
     </>
@@ -186,44 +186,45 @@ export const skills: SkillGroup[] = [
  * Portfolio section
  */
 export const portfolioItems: PortfolioItem[] = [
-  
   {
     title: 'Online Grocery & Food Delivery E-commerce App',
-    description:'ShopNGo is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
+    description:
+      'ShopNGo is an all-in-one e-commerce web application combining grocery shopping, food delivery, and online retail.',
     url: 'https://grocery-blush-nu.vercel.app/',
-    image: '/images/certifications/portfolio/portfolio-4.jpg'
+    image: '/images/certifications/portfolio/portfolio-4.jpg',
   },
   {
     title: 'CAMPUS SKILL EXCHANGE PLATFORM',
-    description:'Connect with fellow students to share knowledge, learn new skills, and grow together.',
+    description: 'Connect with fellow students to share knowledge, learn new skills, and grow together.',
     url: 'https://campus-skill.vercel.app/',
-    image: '/images/certifications/portfolio/portfolio-9.jpg'
+    image: '/images/certifications/portfolio/portfolio-9.jpg',
   },
   {
     title: 'Student Management System',
-    description:'It is a console-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
+    description:
+      'It is a console-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
     url: 'https://github.com/Kanaga-Durga316/student-management-system',
-    image: '/images/certifications/portfolio/portfolio-10.jpg'
+    image: '/images/certifications/portfolio/portfolio-10.jpg',
   },
   {
     title: 'Student Management System',
-    description:'It is a web-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
+    description:
+      'It is a web-based application designed to manage student records, academic details, attendance, and performance efficiently in a centralized platform.',
     url: 'https://github.com/Kanaga-Durga316/student-management-system',
-    image: '/images/certifications/portfolio/portfolio-8.jpg'
+    image: '/images/certifications/portfolio/portfolio-8.jpg',
   },
 ];
-
 
 /**
  * Resume section -- TODO: Standardize resume contact format or offer MDX
  */
 export const education: TimelineItem[] = [
   {
-  date: '2023-2027',
-  location: 'Nadar Saraswathi College of Engineering & Technology',
-  title: 'Computer Science & Engineering',
-  content: <p>Bachelor of Engineering</p>,
-},
+    date: '2023-2027',
+    location: 'Nadar Saraswathi College of Engineering & Technology',
+    title: 'Computer Science & Engineering',
+    content: <p>Bachelor of Engineering</p>,
+  },
 
   {
     date: '2022-2023',
@@ -244,41 +245,25 @@ export const achievements: TimelineItem[] = [
     date: 'june-july 2025',
     location: 'Foclen Software Pvt.Ltd., -Theni',
     title: 'INTERN- Core Java Concepts',
-    content: (
-      <p>
-        Trained in Core Java concepts and OOP fundamentals.
-      </p>
-    ),
+    content: <p>Trained in Core Java concepts and OOP fundamentals.</p>,
   },
   {
     date: 'Dec 2025-Jan 2026',
     location: 'Upskill Campus and UniConverge Technologies Pvt. Ltd. ',
     title: 'INTERN- Full Stack Development (Remote)',
-    content: (
-      <p>
-        Trained in full stack web development.
-      </p>
-    ),
+    content: <p>Trained in full stack web development.</p>,
   },
   {
     date: 'march -april 2026',
     location: 'Adroit Technologies Innovative Solutions Pvt. Ltd.,',
     title: 'INTERN- Data analysis solutions using IBM Cognos Analytics (Remote)',
-    content: (
-      <p>
-        Built dashboards, reports, and visualizations using IBM Cognos Analytics.
-      </p>
-    ),
+    content: <p>Built dashboards, reports, and visualizations using IBM Cognos Analytics.</p>,
   },
   {
     date: 'june - july 2026',
     location: 'Web Walk Infosys Pvt.Ltd., -Madurai',
     title: 'INTERN- Full Stack Web Development(MERN)',
-    content: (
-      <p>
-        Trained in MERN-based full stack web development.
-      </p>
-    ),
+    content: <p>Trained in MERN-based full stack web development.</p>,
   },
   {
     date: '2023 - 2024',
@@ -286,12 +271,11 @@ export const achievements: TimelineItem[] = [
     title: 'Academic Excellence- 1st Position',
     content: (
       <p>
-        I'm secured 1st position, demonstrating exceptional academic excellence, dedication, and consistent performance. 
+        I'm secured 1st position, demonstrating exceptional academic excellence, dedication, and consistent performance.
       </p>
     ),
   },
 ];
-
 
 /**
  * Contact section

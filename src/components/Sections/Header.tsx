@@ -13,8 +13,7 @@ export const headerID = 'headerNav';
 const Header: FC = memo(() => {
   const [currentSection, setCurrentSection] = useState<SectionId | null>(null);
   const navSections = useMemo(
-    () => [SectionId.About, SectionId.Resume, SectionId.Portfolio,SectionId.Certifications,
- SectionId.Contact],
+    () => [SectionId.About, SectionId.Resume, SectionId.Portfolio, SectionId.Certifications, SectionId.Contact],
     [],
   );
 
@@ -39,15 +38,11 @@ const DesktopNav: FC<{navSections: SectionId[]; currentSection: SectionId | null
     const activeClass = classNames(baseClass, 'text-orange-500');
     const inactiveClass = classNames(baseClass, 'text-neutral-100');
     return (
-      <header className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 px-4 py-3 backdrop-blur sm:flex sm:items-center sm:justify-between" id={headerID}>
+      <header
+        className="fixed top-0 z-50 hidden w-full bg-neutral-900/50 px-4 py-3 backdrop-blur sm:flex sm:items-center sm:justify-between"
+        id={headerID}>
         <div className="flex items-center gap-3">
-          <Image
-            alt="KD Logo"
-            className="h-10 w-auto object-contain"
-            height={40}
-            src="/images/logo.png"
-            width={40}
-          />
+          <Image alt="KD Logo" className="h-10 w-auto object-contain" height={40} src="/images/logo.png" width={40} />
           <span className="text-sm font-bold uppercase tracking-wider text-white">Kanaga Durga</span>
         </div>
         <nav className="flex gap-x-8">

@@ -6,9 +6,9 @@ import {contact, SectionId} from '../../../data/data';
 import {ContactType, ContactValue} from '../../../data/dataDef';
 import FacebookIcon from '../../Icon/FacebookIcon';
 import GithubIcon from '../../Icon/GithubIcon';
-import WhatsappIcon from '../../Icon/WhatsappIcon';
 import LinkedInIcon from '../../Icon/LinkedInIcon';
 import TwitterIcon from '../../Icon/TwitterIcon';
+import WhatsappIcon from '../../Icon/WhatsappIcon';
 import Section from '../../Layout/Section';
 import ContactForm from './ContactForm';
 

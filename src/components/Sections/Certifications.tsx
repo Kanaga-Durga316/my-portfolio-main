@@ -14,10 +14,7 @@ const Certifications: FC = memo(() => {
   };
 
   return (
-    <Section
-      className="relative py-20 overflow-hidden"
-      sectionId={SectionId.Certifications}
-    >
+    <Section className="relative py-20 overflow-hidden" sectionId={SectionId.Certifications}>
       {/* Background Image */}
       <img
         alt="Certifications background"
@@ -30,33 +27,33 @@ const Certifications: FC = memo(() => {
 
       {/* Content */}
       <div className="relative z-10">
-        <h2 className="mb-16 text-center text-3xl font-bold text-white">
-          Certifications
-        </h2>
+        <h2 className="mb-16 text-center text-3xl font-bold text-white">Certifications</h2>
 
         <div className="mx-auto flex w-full max-w-6xl snap-x snap-mandatory gap-8 overflow-x-auto overflow-y-hidden py-6 pb-8 scroll-p-1/2 scroll-px-4 md:gap-10 lg:gap-12">
           {certifications.map((cert, index) => {
             const isActive = activeIndex === index;
 
             return (
-                <div
-                  className="flex flex-none flex-col items-center justify-center gap-4 snap-start animate-fadeUp"
-                  key={cert.platform}
-                  style={{animationDelay: `${index * 150}ms`, minWidth: '120px'}}
-                >
+              <div
+                className="flex flex-none flex-col items-center justify-center gap-4 snap-start animate-fadeUp"
+                key={cert.platform}
+                style={{animationDelay: `${index * 150}ms`, minWidth: '120px'}}>
                 <button
                   className={`
                     relative flex h-32 w-32 items-center justify-center
                     rounded-2xl border-2 bg-neutral-800/50 p-4
                     transition-all duration-500 ease-out
                     hover:scale-105 hover:-translate-y-1
-                    ${isActive ? 'scale-110 -translate-y-2 border-orange-400 shadow-lg shadow-orange-500/40' : 'border-neutral-600 hover:border-neutral-400'}
+                    ${
+                      isActive
+                        ? 'scale-110 -translate-y-2 border-orange-400 shadow-lg shadow-orange-500/40'
+                        : 'border-neutral-600 hover:border-neutral-400'
+                    }
                   `}
                   onClick={() => handleClick(cert.platform)}
                   onMouseEnter={() => setActiveIndex(index)}
                   onMouseLeave={() => setActiveIndex(null)}
-                  title={cert.platform}
-                >
+                  title={cert.platform}>
                   <img
                     alt={cert.platform}
                     className={`h-16 w-20 max-h-full max-w-full object-contain transition-all duration-500 ${
@@ -69,8 +66,7 @@ const Certifications: FC = memo(() => {
                 <h3
                   className={`text-center text-sm font-semibold transition-all duration-300 ${
                     isActive ? 'text-white' : 'text-neutral-400'
-                  }`}
-                >
+                  }`}>
                   {cert.platform}
                 </h3>
               </div>

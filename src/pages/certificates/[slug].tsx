@@ -10,9 +10,7 @@ const CertificateViewer: FC = memo(() => {
 
   const slugStr = Array.isArray(slug) ? slug[0] : slug;
 
-  const certificate = certifications.find(
-    (cert) => cert.platform.toLowerCase().replace(/\s+/g, '-') === slugStr,
-  );
+  const certificate = certifications.find(cert => cert.platform.toLowerCase().replace(/\s+/g, '-') === slugStr);
 
   if (!certificate) {
     return (
@@ -21,8 +19,7 @@ const CertificateViewer: FC = memo(() => {
           <h1 className="mb-4 text-3xl font-bold text-white">Certificate Not Found</h1>
           <button
             className="rounded-lg bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
-            onClick={() => router.push('/')}
-          >
+            onClick={() => router.push('/')}>
             Go Back Home
           </button>
         </div>
@@ -39,13 +36,10 @@ const CertificateViewer: FC = memo(() => {
         <div className="flex items-center justify-between border-b border-neutral-700 bg-neutral-800 px-6 py-4">
           <button
             className="flex items-center gap-2 rounded-lg bg-neutral-700 px-4 py-2 font-semibold text-white transition hover:bg-neutral-600"
-            onClick={() => router.push('/')}
-          >
+            onClick={() => router.push('/')}>
             <span aria-hidden="true">←</span> Back
           </button>
-          <h1 className="text-lg font-bold text-white sm:text-xl">
-            {certificate.platform} Certificate
-          </h1>
+          <h1 className="text-lg font-bold text-white sm:text-xl">{certificate.platform} Certificate</h1>
           {/* Spacer to center the title */}
           <div className="w-20" />
         </div>

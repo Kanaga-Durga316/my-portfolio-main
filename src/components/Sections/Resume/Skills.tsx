@@ -44,7 +44,12 @@ export const Skill: FC<{skill: SkillType}> = memo(({skill}) => {
       return ServerStackIcon;
     }
 
-    if (normalizedName.includes('html') || normalizedName.includes('css') || normalizedName.includes('javascript') || normalizedName.includes('typescript')) {
+    if (
+      normalizedName.includes('html') ||
+      normalizedName.includes('css') ||
+      normalizedName.includes('javascript') ||
+      normalizedName.includes('typescript')
+    ) {
       return GlobeAltIcon;
     }
 
@@ -72,7 +77,7 @@ export const Skill: FC<{skill: SkillType}> = memo(({skill}) => {
         <span className="text-sm font-semibold text-neutral-200">{name}</span>
       </div>
 
-        <div className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 w-max max-w-[180px] -translate-x-1/2 scale-95 rounded-xl border border-neutral-700 bg-neutral-800 px-3 py-2 text-sm text-white opacity-0 shadow-xl transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
+      <div className="pointer-events-none absolute left-1/2 top-full z-10 mt-2 w-max max-w-[180px] -translate-x-1/2 scale-95 rounded-xl border border-neutral-700 bg-neutral-800 px-3 py-2 text-sm text-white opacity-0 shadow-xl transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
         <div className="flex items-center gap-2">
           <span className="text-orange-400">
             <IconComponent className="h-4 w-4" />

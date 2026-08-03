@@ -45,7 +45,7 @@ const ContactForm: FC = memo(() => {
             from_email: data.email,
             message: data.message,
           },
-          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
         );
         setStatus('success');
         setData(defaultData);
@@ -61,7 +61,15 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" value={data.name} />
+      <input
+        className={inputClasses}
+        name="name"
+        onChange={onChange}
+        placeholder="Name"
+        required
+        type="text"
+        value={data.name}
+      />
       <input
         autoComplete="email"
         className={inputClasses}
@@ -82,12 +90,8 @@ const ContactForm: FC = memo(() => {
         rows={6}
         value={data.message}
       />
-      {status === 'success' && (
-        <p className="text-sm text-green-400">Message sent successfully!</p>
-      )}
-      {status === 'error' && (
-        <p className="text-sm text-red-400">Failed to send message. Please try again.</p>
-      )}
+      {status === 'success' && <p className="text-sm text-green-400">Message sent successfully!</p>}
+      {status === 'error' && <p className="text-sm text-red-400">Failed to send message. Please try again.</p>}
       <button
         aria-label="Submit contact form"
         className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800 disabled:opacity-50 disabled:cursor-not-allowed"
